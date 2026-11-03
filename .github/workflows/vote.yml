@@ -1,0 +1,35 @@
+name: vote
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: vote
+  cancel-in-progress: false
+jobs:
+  vote:
+    if: startsWith(github.event.issue.title, 'vote:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count the vote
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          VOTER: ${{ github.event.issue.user.login }}
+        run: |
+          CHOICE=$(printf '%s' "$TITLE" | sed -E 's/^vote:[[:space:]]*//' | tr -cd 'a-z')
+          node scripts/vote.js "$CHOICE" "$VOTER"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add votes.json assets/votes.svg
+          git commit -m "vote: count one" || exit 0
+          git push
+      - name: Thank and close
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number,
+              body: "Counted. Thanks for voting. It shows on my profile within a minute. You can change your vote any time by voting again."});
+            await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number, state: "closed"});
