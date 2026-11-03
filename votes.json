@@ -1,10 +1,8 @@
 {
   "options": {
-    "twring": 1,
+    "twring": 0,
     "bibrain": 0,
     "new": 0
   },
-  "voters": {
-    "Rishflips": "twring"
-  }
+  "voters": {}
 }

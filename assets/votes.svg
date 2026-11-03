@@ -2,11 +2,11 @@
   <rect x="1" y="1" width="898" height="246" rx="14" fill="#0d1117" stroke="#30363d"/>
   <g font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
   <text x="28" y="38" font-size="18" font-weight="700" fill="#f0f6fc">What should I ship next?</text>
-  <text x="872" y="38" text-anchor="end" font-size="13" font-family="ui-monospace,Menlo,Consolas,monospace" fill="#8b949e">1 vote, live</text>
+  <text x="872" y="38" text-anchor="end" font-size="13" font-family="ui-monospace,Menlo,Consolas,monospace" fill="#8b949e">0 votes, live</text>
   <text x="28" y="70" font-size="15" fill="#e6edf3">Twring: voice notes both ways</text>
     <rect x="28" y="80" width="520" height="14" rx="7" fill="#21262d"/>
-    <rect x="28" y="80" width="0" height="14" rx="7" fill="#7ee787"><animate attributeName="width" values="0;520" dur="1.2s" fill="freeze"/></rect>
-    <text x="566" y="92" font-size="14" font-family="ui-monospace,Menlo,Consolas,monospace" fill="#7ee787">100%  (1)</text><text x="28" y="126" font-size="15" fill="#e6edf3">BiBrain: open public beta</text>
+    <rect x="28" y="80" width="0" height="14" rx="7" fill="#7ee787"><animate attributeName="width" values="0;6" dur="1.2s" fill="freeze"/></rect>
+    <text x="566" y="92" font-size="14" font-family="ui-monospace,Menlo,Consolas,monospace" fill="#7ee787">0%  (0)</text><text x="28" y="126" font-size="15" fill="#e6edf3">BiBrain: open public beta</text>
     <rect x="28" y="136" width="520" height="14" rx="7" fill="#21262d"/>
     <rect x="28" y="136" width="0" height="14" rx="7" fill="#a78bfa"><animate attributeName="width" values="0;6" dur="1.2s" fill="freeze"/></rect>
     <text x="566" y="148" font-size="14" font-family="ui-monospace,Menlo,Consolas,monospace" fill="#a78bfa">0%  (0)</text><text x="28" y="182" font-size="15" fill="#e6edf3">Surprise me: a new product</text>
